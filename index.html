@@ -1,54 +1,49 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>PUC – Feedback</title>
-  <style>
-    /* Tu peux mettre ceci dans styles.css si tu préfères */
-    :root{ --card-bg:#fff; --card-br:#e5e7eb; --card-shadow:0 8px 24px rgba(16,24,40,.08)}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
-         background:#f5f7fb;margin:0;padding:24px}
-    header{display:flex;flex-direction:column;align-items:center;gap:16px;margin-bottom:24px}
-    .brand img{max-width:560px;height:auto;display:block}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
-    .card{background:var(--card-bg);border:1px solid var(--card-br);border-radius:16px;
-          padding:24px;box-shadow:var(--card-shadow)}
-    .card h2{margin:8px 0 16px;font-size:1.6rem;color:#111827}
-    .btn{display:inline-block;background:#0d6efd;color:#fff;border-radius:10px;
-         padding:12px 18px;text-decoration:none}
-    .btn:hover{background:#0b5ed7}
-    .menu-vertical{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
-    .menu-vertical a{padding:10px 14px;border-radius:8px;text-decoration:none;background:#eef2ff;color:#1f2937}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header>
-    <div class="brand">
-      <!-- Image simple (commence par ça) -->
-      <img src="satisfaction-1.jpg" alt="Votre avis nous intéresse">
-    </div>
-    <nav class="menu-vertical">
-      <a href="#toilettes">Formulaire Toilettes</a>
-      <a href="#maisons">Formulaire Maisons</a>
-    </nav>
-  </header>
+  <main class="screen">
+    <section class="card" aria-label="Menu formulaires feedback">
+      <div class="logo-badge" aria-hidden="true">
+        <img src="satisfaction-1.jpg" alt="" />
+      </div>
 
-  <main class="grid">
-    <section class="card" id="toilettes">
-      <img src="Screenshot 2026-01-16 161652.png" alt="Formulaire Toilettes" width="32" height="32"
-           style="vertical-align:middle;margin-right:8px">
-      <h2>Propreté des toilettes</h2>
-      <a class="btn" href="https://forms.office.com/e/BpeK4D3cxD" target="_blank" rel="noopener">Répondre au formulaire</a>
-    </section>
+      <h1>Votre avis nous intéresse</h1>
+      <p class="subtitle">Choisissez le formulaire dans la<br>liste</p>
 
-    <section class="card" id="maisons">
-      <img src="39106473_xxl-1445460448-600x360.jpg" alt="Formulaire Maisons" width="32" height="32"
-           style="vertical-align:middle;margin-right:8px">
-      <h2>Propreté des maisons</h2>
-      <a class="btn" href="https://forms.office.com/e/TB0JN27Fwe" target="_blank" rel="noopener">Répondre au formulaire</a>
+      <hr class="divider" />
+
+      <nav class="list" aria-label="Liste des formulaires">
+        <a class="item" href="https://forms.office.com/e/BpeK4D3cxD" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">
+              <img src="Screenshot 2026-01-16 161652.png" alt="" />
+            </span>
+            <span class="text">
+              Partagez votre avis sur la<br>propreté des toilettes
+            </span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="item" href="https://forms.office.com/e/TB0JN27Fwe" target="_blank" rel="noopener">
+          <span class="left">
+            <span class="icon">
+              <img src="39106473_xxl-1445460448-600x360.jpg" alt="" />
+            </span>
+            <span class="text">
+              Partagez votre avis sur la<br>propreté des maisons
+            </span>
+          </span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
     </section>
   </main>
 </body>
